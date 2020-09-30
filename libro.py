@@ -7,12 +7,8 @@ class Libro:
 
     def __str__(self):
         return(
-"""Titulo: {0}
-Autor: {1}
-Publicado: {2}
-Editorial: {3}""".format(
-    self.__titulo,
-    self.__autor, 
-    self.__publicado, 
-    self.__editorial)
+            'Titulo: ' + self.__titulo + '\n' +
+            'Autor: ' + self.__titulo + '\n' +
+            'Publicado: ' + self.__publicado + '\n' +
+            'Editorial: ' + self.__editorial
         )
