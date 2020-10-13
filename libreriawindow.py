@@ -8,7 +8,7 @@ class LibreriaWindow(QMainWindow):
         super(LibreriaWindow, self).__init__()
         ui = Ui_MainWindow()
         ui.setupUi(self)
-        ui.agregar_button.clicked.connect(self.click_agregar_buton)
+        ui.agregar_pushButton.clicked.connect(self.click_agregar_buton)
 
     # TODO:
     # Slot del boton

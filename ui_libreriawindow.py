@@ -17,7 +17,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(421, 293)
+        MainWindow.resize(264, 305)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout_2 = QGridLayout(self.centralwidget)
@@ -31,33 +31,33 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
 
-        self.lineEdit_2 = QLineEdit(self.groupBox)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.autor_lineEdit = QLineEdit(self.groupBox)
+        self.autor_lineEdit.setObjectName(u"autor_lineEdit")
 
-        self.gridLayout.addWidget(self.lineEdit_2, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.autor_lineEdit, 1, 1, 1, 1)
 
         self.label = QLabel(self.groupBox)
         self.label.setObjectName(u"label")
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
-        self.lineEdit_3 = QLineEdit(self.groupBox)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.editorial_lineEdit = QLineEdit(self.groupBox)
+        self.editorial_lineEdit.setObjectName(u"editorial_lineEdit")
 
-        self.gridLayout.addWidget(self.lineEdit_3, 3, 1, 1, 1)
+        self.gridLayout.addWidget(self.editorial_lineEdit, 3, 1, 1, 1)
 
-        self.spinBox = QSpinBox(self.groupBox)
-        self.spinBox.setObjectName(u"spinBox")
-        self.spinBox.setMinimum(2000)
-        self.spinBox.setMaximum(2020)
-        self.spinBox.setValue(2020)
+        self.publicado_spinBox = QSpinBox(self.groupBox)
+        self.publicado_spinBox.setObjectName(u"publicado_spinBox")
+        self.publicado_spinBox.setMinimum(2000)
+        self.publicado_spinBox.setMaximum(2020)
+        self.publicado_spinBox.setValue(2020)
 
-        self.gridLayout.addWidget(self.spinBox, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.publicado_spinBox, 2, 1, 1, 1)
 
-        self.lineEdit = QLineEdit(self.groupBox)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.titulo_lineEdit = QLineEdit(self.groupBox)
+        self.titulo_lineEdit.setObjectName(u"titulo_lineEdit")
 
-        self.gridLayout.addWidget(self.lineEdit, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.titulo_lineEdit, 0, 1, 1, 1)
 
         self.label_3 = QLabel(self.groupBox)
         self.label_3.setObjectName(u"label_3")
@@ -69,10 +69,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.label_4, 3, 0, 1, 1)
 
-        self.agregar_button = QPushButton(self.groupBox)
-        self.agregar_button.setObjectName(u"agregar_button")
+        self.agregar_pushButton = QPushButton(self.groupBox)
+        self.agregar_pushButton.setObjectName(u"agregar_pushButton")
 
-        self.gridLayout.addWidget(self.agregar_button, 4, 0, 1, 2)
+        self.gridLayout.addWidget(self.agregar_pushButton, 4, 0, 1, 2)
 
 
         self.gridLayout_2.addWidget(self.groupBox, 0, 0, 1, 1)
@@ -80,7 +80,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 421, 22))
+        self.menubar.setGeometry(QRect(0, 0, 264, 22))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -98,6 +98,6 @@ class Ui_MainWindow(object):
         self.label.setText(QCoreApplication.translate("MainWindow", u"T\u00edtulo:", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Publicado:", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Editorial", None))
-        self.agregar_button.setText(QCoreApplication.translate("MainWindow", u"Agregar", None))
+        self.agregar_pushButton.setText(QCoreApplication.translate("MainWindow", u"Agregar", None))
     # retranslateUi
 
