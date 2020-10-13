@@ -26,25 +26,15 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName(u"groupBox")
         self.gridLayout = QGridLayout(self.groupBox)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.label_2 = QLabel(self.groupBox)
-        self.label_2.setObjectName(u"label_2")
-
-        self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
-
         self.autor_lineEdit = QLineEdit(self.groupBox)
         self.autor_lineEdit.setObjectName(u"autor_lineEdit")
 
         self.gridLayout.addWidget(self.autor_lineEdit, 1, 1, 1, 1)
 
-        self.label = QLabel(self.groupBox)
-        self.label.setObjectName(u"label")
+        self.label_4 = QLabel(self.groupBox)
+        self.label_4.setObjectName(u"label_4")
 
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-
-        self.editorial_lineEdit = QLineEdit(self.groupBox)
-        self.editorial_lineEdit.setObjectName(u"editorial_lineEdit")
-
-        self.gridLayout.addWidget(self.editorial_lineEdit, 3, 1, 1, 1)
+        self.gridLayout.addWidget(self.label_4, 3, 0, 1, 1)
 
         self.publicado_spinBox = QSpinBox(self.groupBox)
         self.publicado_spinBox.setObjectName(u"publicado_spinBox")
@@ -54,25 +44,45 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.publicado_spinBox, 2, 1, 1, 1)
 
+        self.editorial_lineEdit = QLineEdit(self.groupBox)
+        self.editorial_lineEdit.setObjectName(u"editorial_lineEdit")
+
+        self.gridLayout.addWidget(self.editorial_lineEdit, 3, 1, 1, 1)
+
         self.titulo_lineEdit = QLineEdit(self.groupBox)
         self.titulo_lineEdit.setObjectName(u"titulo_lineEdit")
 
         self.gridLayout.addWidget(self.titulo_lineEdit, 0, 1, 1, 1)
+
+        self.agregar_inicio_pushButton = QPushButton(self.groupBox)
+        self.agregar_inicio_pushButton.setObjectName(u"agregar_inicio_pushButton")
+
+        self.gridLayout.addWidget(self.agregar_inicio_pushButton, 5, 0, 1, 2)
+
+        self.label_2 = QLabel(self.groupBox)
+        self.label_2.setObjectName(u"label_2")
+
+        self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
 
         self.label_3 = QLabel(self.groupBox)
         self.label_3.setObjectName(u"label_3")
 
         self.gridLayout.addWidget(self.label_3, 2, 0, 1, 1)
 
-        self.label_4 = QLabel(self.groupBox)
-        self.label_4.setObjectName(u"label_4")
+        self.label = QLabel(self.groupBox)
+        self.label.setObjectName(u"label")
 
-        self.gridLayout.addWidget(self.label_4, 3, 0, 1, 1)
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
-        self.agregar_pushButton = QPushButton(self.groupBox)
-        self.agregar_pushButton.setObjectName(u"agregar_pushButton")
+        self.agregar_final_pushButton = QPushButton(self.groupBox)
+        self.agregar_final_pushButton.setObjectName(u"agregar_final_pushButton")
 
-        self.gridLayout.addWidget(self.agregar_pushButton, 4, 0, 1, 2)
+        self.gridLayout.addWidget(self.agregar_final_pushButton, 4, 0, 1, 2)
+
+        self.mostrar_pushButton = QPushButton(self.groupBox)
+        self.mostrar_pushButton.setObjectName(u"mostrar_pushButton")
+
+        self.gridLayout.addWidget(self.mostrar_pushButton, 6, 0, 1, 2)
 
 
         self.gridLayout_2.addWidget(self.groupBox, 0, 0, 1, 1)
@@ -94,10 +104,12 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Mis Libros", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Libro", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Autor:", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"T\u00edtulo:", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Publicado:", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Editorial", None))
-        self.agregar_pushButton.setText(QCoreApplication.translate("MainWindow", u"Agregar", None))
+        self.agregar_inicio_pushButton.setText(QCoreApplication.translate("MainWindow", u"Agregar Inicio", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Autor:", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Publicado:", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"T\u00edtulo:", None))
+        self.agregar_final_pushButton.setText(QCoreApplication.translate("MainWindow", u"Agregar Final", None))
+        self.mostrar_pushButton.setText(QCoreApplication.translate("MainWindow", u"Mostrar Libros", None))
     # retranslateUi
 
