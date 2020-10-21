@@ -45,3 +45,5 @@ class LibreriaWindow(QMainWindow):
     @Slot()
     def click_mostrar_libros(self):
         self.libreria.mostrar()
+        self.ui.salida_plainTextEdit.clear()
+        self.ui.salida_plainTextEdit.insertPlainText(str(libreria))

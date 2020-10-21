@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>264</width>
-    <height>305</height>
+    <width>556</width>
+    <height>325</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -95,6 +95,9 @@
       </layout>
      </widget>
     </item>
+    <item row="0" column="1">
+     <widget class="QPlainTextEdit" name="salida_plainTextEdit"/>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -102,7 +105,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>264</width>
+     <width>556</width>
      <height>22</height>
     </rect>
    </property>

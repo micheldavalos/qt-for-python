@@ -17,7 +17,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(264, 305)
+        MainWindow.resize(556, 325)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout_2 = QGridLayout(self.centralwidget)
@@ -87,10 +87,15 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.groupBox, 0, 0, 1, 1)
 
+        self.salida_plainTextEdit = QPlainTextEdit(self.centralwidget)
+        self.salida_plainTextEdit.setObjectName(u"salida_plainTextEdit")
+
+        self.gridLayout_2.addWidget(self.salida_plainTextEdit, 0, 1, 1, 1)
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 264, 22))
+        self.menubar.setGeometry(QRect(0, 0, 556, 22))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
