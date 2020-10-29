@@ -20,6 +20,23 @@ class Libreria:
         return "".join(
             str(libro) + "\n" for libro in self.__libros
         )
+
+    def __len__(self):
+        return len(self.__libros)
+        
+    def __iter__(self):
+        self.cont = 0
+
+        return self
+
+    def __next__(self):
+        if self.cont < len(self.__libros):
+            libro = self.__libros[self.cont]
+            self.cont += 1
+            return libro
+        else:
+            raise StopIteration
+
     
     def guardar(self, ubicacion):
             try:

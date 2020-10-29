@@ -15,6 +15,11 @@ class Libro:
             'Editorial: ' + self.__editorial + '\n'
         )
     
+    def __getitem__(self, attr):
+        # if attr == 'titulo': return self.__titulo
+        return self.to_dict()[attr]
+
+    
     def to_dict(self):
         return {
             "titulo": self.__titulo,

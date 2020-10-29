@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox
+from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QTableWidgetItem
 from PySide2.QtCore import Slot
 from ui_libreriawindow import Ui_MainWindow
 
@@ -22,6 +22,10 @@ class LibreriaWindow(QMainWindow):
 
         self.ui.actionAbrir.triggered.connect(self.action_abrir_archivo)
         self.ui.actionGuadar.triggered.connect(self.action_guardar_archivo)
+
+
+        self.ui.mostrar_tabla_pushButton.clicked.connect(self.mostrar_tabla)
+    
 
 
     @Slot()
@@ -73,7 +77,6 @@ class LibreriaWindow(QMainWindow):
                 'No fue posible abrir el archivo ' +  ubicacion
             )
 
-
     @Slot()
     def action_guardar_archivo(self):
         ubicacion = QFileDialog.getSaveFileName(
@@ -87,7 +90,7 @@ class LibreriaWindow(QMainWindow):
             QMessageBox.information(
                 self,
                 'Éxito',
-                'Se guardó el archivo en ' + ubicacion                
+                'Se guardó el archivo en ' + ubicacion               
             )
         else:
             QMessageBox.critical(
@@ -96,3 +99,26 @@ class LibreriaWindow(QMainWindow):
                 'No se pudo crear el archivo ' + ubicacion
             )
     
+    @Slot()
+    def mostrar_tabla(self):
+        self.ui.tabla.setColumnCount(4)
+        headers = ['Título', 'Autor', 'Publicado', 'Editorial']
+        self.ui.tabla.setHorizontalHeaderLabels(headers)
+
+        self.ui.tabla.setRowCount(len(self.libreria))
+
+        row = 0
+        for libro in self.libreria:
+            self.ui.tabla.clear()
+
+            titulo_widget = QTableWidgetItem(libro['titulo'])
+            autor_widget = QTableWidgetItem(libro['autor'])
+            publicado_widget = QTableWidgetItem(str(libro['publicado']))
+            editorial_widget = QTableWidgetItem(libro['editorial'])
+
+            self.ui.tabla.setItem(row, 0, titulo_widget)
+            self.ui.tabla.setItem(row, 1, autor_widget)
+            self.ui.tabla.setItem(row, 2, publicado_widget)
+            self.ui.tabla.setItem(row, 3, editorial_widget)
+
+            row += 1
