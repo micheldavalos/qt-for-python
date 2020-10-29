@@ -18,8 +18,23 @@ class Libro:
     def __getitem__(self, attr):
         # if attr == 'titulo': return self.__titulo
         return self.to_dict()[attr]
-
     
+    @property
+    def titulo(self):
+        return self.__titulo
+
+    @property
+    def autor(self):
+        return self.__autor
+
+    @property
+    def publicado(self):
+        return self.__publicado
+
+    @property
+    def editorial(self):
+        return self.__editorial
+
     def to_dict(self):
         return {
             "titulo": self.__titulo,

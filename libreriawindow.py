@@ -109,12 +109,15 @@ class LibreriaWindow(QMainWindow):
 
         row = 0
         for libro in self.libreria:
-            self.ui.tabla.clear()
+            titulo_widget = QTableWidgetItem(libro.titulo)
+            autor_widget = QTableWidgetItem(libro.autor)
+            publicado_widget = QTableWidgetItem(str(libro.publicado))
+            editorial_widget = QTableWidgetItem(libro.editorial)
 
-            titulo_widget = QTableWidgetItem(libro['titulo'])
-            autor_widget = QTableWidgetItem(libro['autor'])
-            publicado_widget = QTableWidgetItem(str(libro['publicado']))
-            editorial_widget = QTableWidgetItem(libro['editorial'])
+            # titulo_widget = QTableWidgetItem(libro['titulo'])
+            # autor_widget = QTableWidgetItem(libro['autor'])
+            # publicado_widget = QTableWidgetItem(str(libro['publicado']))
+            # editorial_widget = QTableWidgetItem(libro['editorial'])
 
             self.ui.tabla.setItem(row, 0, titulo_widget)
             self.ui.tabla.setItem(row, 1, autor_widget)

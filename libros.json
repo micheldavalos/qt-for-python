@@ -1,8 +1,20 @@
 [
      {
-          "titulo": "Las Ense\u00f1anzas de Don Juan",
-          "autor": "Carlos Castaneda",
-          "year": 1970,
-          "editorial": "Fondo de Cultura Econ\u00f3mica"
+          "titulo": "a",
+          "autor": "b",
+          "publicado": 2020,
+          "editorial": "c"
+     },
+     {
+          "titulo": "z",
+          "autor": "z",
+          "publicado": 2020,
+          "editorial": "z"
+     },
+     {
+          "titulo": "m",
+          "autor": "m",
+          "publicado": 2009,
+          "editorial": "m"
      }
 ]
