@@ -25,7 +25,7 @@ class LibreriaWindow(QMainWindow):
 
 
         self.ui.mostrar_tabla_pushButton.clicked.connect(self.mostrar_tabla)
-    
+        self.ui.buscar_pushButton.clicked.connect(self.buscar_libro_titulo)   
 
 
     @Slot()
@@ -125,3 +125,34 @@ class LibreriaWindow(QMainWindow):
             self.ui.tabla.setItem(row, 3, editorial_widget)
 
             row += 1
+    
+    @Slot()
+    def buscar_libro_titulo(self):
+        titulo = self.ui.buscar_lineEdit.text()
+        encontrado = False
+
+        for libro in self.libreria:
+            if titulo == libro.titulo:
+                self.ui.tabla.clear()
+                self.ui.tabla.setRowCount(1)
+
+                titulo_widget = QTableWidgetItem(libro.titulo)
+                autor_widget = QTableWidgetItem(libro.autor)
+                publicado_widget = QTableWidgetItem(str(libro.publicado))
+                editorial_widget = QTableWidgetItem(libro.editorial)
+
+                self.ui.tabla.setItem(0, 0, titulo_widget)
+                self.ui.tabla.setItem(0, 1, autor_widget)
+                self.ui.tabla.setItem(0, 2, publicado_widget)
+                self.ui.tabla.setItem(0, 3, editorial_widget)
+
+                encontrado = True
+        
+        if not encontrado:
+            QMessageBox.warning(
+                self,
+                "Atención",
+                f'El libro con el título "{titulo}" no fue encontrado'
+            )
+
+        
